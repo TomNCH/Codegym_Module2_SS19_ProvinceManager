@@ -41,7 +41,7 @@ public class CustomerController {
         return modelAndView;
     }
 
-    @GetMapping("/")
+    @GetMapping("/customers")
     public ModelAndView listCustomers(@RequestParam("s") Optional<String> s, @PageableDefault(value = 5) Pageable pageable){
         Page<Customer> customers;
         if (s.isPresent()){
